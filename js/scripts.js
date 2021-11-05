@@ -4,7 +4,7 @@ function Pizza(size,toppings){
 }
 
 Pizza.prototype.getCost=function(){
-  let cost =0;
+  let cost=0;
   if (this.size="large"){
     cost+=16;
   }
@@ -14,21 +14,22 @@ Pizza.prototype.getCost=function(){
   else{
     cost+=12;
   }
-  highPriceItems = ["veggie sausage","veggie pepperoni", "veggie bacon", "tofu ricotta"];
-  mediumPriceItems = ["artichokes", "eggplant", "mushrooms", "basil", "olives"];
-  lowPriceItems = ["tomatoes","onions","peppers", "olives", "spinach", "garlic", "pineapple"];
-  this.highPriceItems.forEach(function(item){
-    if(this.toppings.includes(item)){
+  const toppings = this.toppings;
+  const highPriceItems = ["veggie sausage","veggie pepperoni", "veggie bacon", "tofu ricotta"];
+  const mediumPriceItems = ["artichokes", "eggplant", "mushrooms", "basil", "olives"];
+  const lowPriceItems = ["tomatoes","onions","peppers", "spinach", "garlic", "pineapple"];
+  highPriceItems.forEach(function(item){
+    if(toppings.includes(item)){
       cost+=2;
     }
   })
-  this.mediumPriceItems.forEach(function(item){
-    if(this.toppings.includes(item)){
+  mediumPriceItems.forEach(function(item){
+    if(toppings.includes(item)){
       cost+=1;
     }
   })
-  this.lowPriceItems.forEach(function(item){
-    if(this.toppings.includes(item)){
+  lowPriceItems.forEach(function(item){
+    if(toppings.includes(item)){
       cost+=.5;
     }
   });
