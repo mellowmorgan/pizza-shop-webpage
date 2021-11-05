@@ -61,9 +61,3 @@ Describe: PizzasInCart.prototype.delete(id)<br>
 Test: "It should return true if argument 1 passed and delete myPizza"<br>
 Code: myPizzas.delete(1)<br>
 Expected Output: true<br>
-
-Describe: PizzasInCart.prototype.deleteAllPizzas()<br>
-
-Test: "It should return empty pizzas object"<br>
-Code: myPizzas.deleteAllPizzas<br>
-Expected Output: pizzas {}<br>

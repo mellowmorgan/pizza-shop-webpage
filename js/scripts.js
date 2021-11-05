@@ -18,6 +18,7 @@ PizzasInCart.prototype.addPizza=function(pizza){
   this.pizzas[pizza.id]=pizza;
   
 }
+
 function Pizza(size,toppings){
   this.size=size;
   this.toppings=toppings;
@@ -52,7 +53,7 @@ Pizza.prototype.getCost=function(){
 }
 let newPizza;
 
-let pizzas = new PizzasInCart();
+
 
 function getChecked(){
   const highPriceItems = ["sausage","pepperoni", "bacon", "tofu"];
@@ -70,7 +71,14 @@ function getChecked(){
     });
     return toppingsChecked;
 }
-function displayPizzas(pizzaList){
+function deleteCartPizzas(){
+  Object.keys(pizzas.pizzas).forEach(function(key){
+    pizzas.deletePizza(key);
+  });
+}
+let pizzas = new PizzasInCart();
+function displayPizzas(){
+  
   const toppingsSelected = getChecked();
   const size = $("input[name='size']:checked").val()
   newPizza= new Pizza(size, toppingsSelected);
@@ -80,8 +88,8 @@ function displayPizzas(pizzaList){
   $("#pizza-list").empty();
   $("#total-cost").html("$" + cost);
   
-  Object.keys(pizzaList.pizzas).forEach(function(key){
-    const pizza=pizzaList.pizzas[key];
+  Object.keys(pizzas.pizzas).forEach(function(key){
+    const pizza=pizzas.pizzas[key];
     $("#pizza-list").append("<li> Pizza " + pizza.id + " (size: "+pizza.size + "; toppings: "+ pizza.toppings.join(", ") + ")</li>");
 
   });
@@ -91,20 +99,17 @@ function attachListeners(){
   // $("#").on("click",function(){
 
   // });
-  // $("#empty").on("click",function(){
-    
-  //   //need to create method to delete pizzas from PizzasInCart
-  //   //empty display zero out cost;
-
-  // });
+  $("button#empty").on("click",function(){
+    alert(pizzas.pizzas[1].size);
+    // deleteCartPizza();
+    // displayPizzas();
+  });
 }
 
 $(document).ready(function(){
-  // attachListener();
+  attachListeners();
   $("#form-pizza").submit(function(event){
     event.preventDefault();
-   
-  
-    displayPizzas(pizzas);
+    displayPizzas();
   });
 });
