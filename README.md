@@ -38,3 +38,8 @@ Test: "It should return cost of pizza object called on, cost determined by toppi
 Code: const myPizza.getCost();<br>
 Expected Output: 28<br>
 
+Describe: PizzasInCart()<br>
+
+Test: "It should return an object with empty object for holding pizzas"<br>
+Code: const myPizzas = new PizzasInCart();<br>
+Expected Output: PizzasInCart { pizzas: {} }<br>
