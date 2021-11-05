@@ -42,4 +42,16 @@ Describe: PizzasInCart()<br>
 
 Test: "It should return an object with empty object for holding pizzas"<br>
 Code: const myPizzas = new PizzasInCart();<br>
-Expected Output: PizzasInCart { pizzas: {} }<br>
+Expected Output: myPizzas { pizzas: {} }<br>
+
+Describe: PizzasInCart.prototype.addPizza(myPizza)<br>
+
+Test: "It should add Pizza object myPizza into pizzas property of PizzasInCart"<br>
+Code: myPizzas.addPizza(myPizza);<br>
+Expected Output: myPizzas { pizzas: {MyPizza} }<br>
+
+Describe: PizzasInCart.prototype.assignId()<br>
+
+Test: "It should return unique ID"<br>
+Code: myPizzas.assignId;<br>
+Expected Output: 1<br>
