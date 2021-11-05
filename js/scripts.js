@@ -57,6 +57,8 @@ $(document).ready(function(){
     newPizza= new Pizza(size, toppingsSelected);
     //pizza.size correct
     const cost = newPizza.getCost();//changing pizza size to large somehow
-    $("#pizza").html(newPizza.size+ ", " +newPizza.toppings + " "+cost);
+    $("#total-cost").html("$" + cost);
+    $("#cart").show();
+  
   });
 });
