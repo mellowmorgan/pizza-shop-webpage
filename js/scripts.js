@@ -5,10 +5,10 @@ function Pizza(size,toppings){
 
 Pizza.prototype.getCost=function(){
   let cost=0;
-  if (this.size="large"){
+  if (this.size==="large"){
     cost+=16;
   }
-  else if (this.size="medium"){
+  else if (this.size==="medium"){
     cost+=14;
   }
   else{
@@ -55,7 +55,8 @@ $(document).ready(function(){
     const toppingsSelected = getChecked();
     const size = $("input[name='size']:checked").val()
     newPizza= new Pizza(size, toppingsSelected);
-    $("#pizza").html(newPizza.size+ ", " +newPizza.toppings);
-
+    //pizza.size correct
+    const cost = newPizza.getCost();//changing pizza size to large somehow
+    $("#pizza").html(newPizza.size+ ", " +newPizza.toppings + " "+cost);
   });
 });
