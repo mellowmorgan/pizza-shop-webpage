@@ -4,9 +4,7 @@
   display:none;  
   padding:2rem;
 }
-#cart button{
-  margin-right:.5rem;
-}
+
 
 #cart h3,h4,h5,ul{
   margin-bottom:1rem;
@@ -15,15 +13,13 @@ label{
   margin-right:1rem;
 }
 #form-pizza button{
-  margin-top:2rem;}
-p{font-weight: bold;}
+  margin-top:.5rem;}
 #modal{
   color:black;
 }
 li{
   margin-bottom:1rem;
 }
-
 
 body{
   background-image: url(../img/1pizza.jpeg);
@@ -98,10 +94,24 @@ body{
   font-size: 28px;
   font-weight: bold;
 }
-
+.col-md-4{
+  margin-top:1rem;
+}
+.col-md-8{
+  margin-top: 1rem;
+}
 .close:hover,
 .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+h2{
+  text-align:center;
+  margin-top:1rem;
+  margin-bottom:1rem;
+}
+a{
+  text-align: center;
+  margin-bottom:1rem;
 }

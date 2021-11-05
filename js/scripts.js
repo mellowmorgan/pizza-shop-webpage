@@ -1,3 +1,4 @@
+//Business Logic
 function PizzasInCart(){
   this.pizzas = {};
   this.currentId = 0;
@@ -54,10 +55,16 @@ Pizza.prototype.getCost=function(){
 
   return cost;
 }
-let newPizza;
 
+//Utility Logic
+function deleteCartPizzas(){
+  Object.keys(pizzas.pizzas).forEach(function(key){
+    pizzas.deletePizza(key);
+  });
+  pizzas.currentId = 0;
+}
 
-
+//UI Logic
 function getChecked(){
   const highPriceItems = ["sausage","pepperoni", "bacon", "tofu"];
   const otherPriceItems = ["artichokes", "mushrooms", "basil", "olives","tomatoes","onions","peppers", "spinach", "garlic", "pineapple"]; 
@@ -74,37 +81,27 @@ function getChecked(){
     });
     return toppingsChecked;
 }
-function deleteCartPizzas(){
-  Object.keys(pizzas.pizzas).forEach(function(key){
-    pizzas.deletePizza(key);
-  });
-  pizzas.currentId = 0;
-}
-let pizzas = new PizzasInCart();
+
 function displayPizzas(){
   const toppingsSelected = getChecked();
   const size = $("input[name='size']:checked").val()
   newPizza= new Pizza(size, toppingsSelected);
- 
- 
   pizzas.addPizza(newPizza);
   let cost = pizzas.totalCost;
   $("#pizza-list").empty();
   $("#total-cost").html("$" + cost);
-  
   Object.keys(pizzas.pizzas).forEach(function(key){
     const pizza=pizzas.pizzas[key]; //I'm realizing my choice of variable names was BAD
     let toppings="none";
-    if (pizza.toppings!=undefined){
+    if (pizza.toppings.length>0){
       toppings=pizza.toppings.join(", ")
     } 
     $("#pizza-list").append("<li> Pizza " + pizza.id + " (size: "+pizza.size + "; toppings: "+ toppings+ ")</li>");
-
   });
   $("#cart").show();
   $('#form-pizza').trigger("reset");
-  
 }
+
 function attachListeners(){
   // $("#").on("click",function(){
 
@@ -156,10 +153,10 @@ function attachListeners(){
     $("#delivery-address").val();
     $("#delivery-phone").val();
   });
-
-  
 }
 
+let newPizza;
+let pizzas = new PizzasInCart();
 $(document).ready(function(){
   attachListeners();
   $("#form-pizza").submit(function(event){

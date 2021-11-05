@@ -16,7 +16,7 @@ Pizza shop webpage for making custom pies and displaying total price.
 * Open index.html.
 
 ## Known Bugs
-* No known bugs.
+* Pickup/Delivery modal popup doesn't actually work. Worked on display but never got to functionality.
 
 ## License
 [MIT](https://opensource.org/licenses/MIT)
