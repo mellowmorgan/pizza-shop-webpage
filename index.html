@@ -11,7 +11,9 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h4>Select Size of Pizza</h4>
+        <h4>Custom Pizza</h4>
+        <h5>Everything is vegan!</h5>
+        <p>We use Follow Your Heart vegan cheese on all our pies.</p>
         
         <form id="form-pizza">
           <div class="form-group">
@@ -56,7 +58,7 @@
             <input type="checkbox" id="pineapple" value="pineapple">
             <label for="pineapple">Pineapple</label>
           </div>
-          <button class="btn btn-primary" id="pizza-time" type="submit">Add to cart</button>
+          <button class="btn btn-primary" id="pizza-time" type="submit">Add to Order</button>
         </form>
         <div id="cart">
           <h3>Cart</h3>
@@ -65,7 +67,7 @@
           
           </ul>
           <h5>Total Cost: <span id="total-cost"></span></h5>
-          <button class="btn btn-secondary">Check Out</button><button class="btn btn-danger">Empty Cart</button>
+          <button id="checkout"class="btn btn-secondary">Check Out</button><button id="empty" class="btn btn-danger">Empty Cart</button>
         </div>
       </div>
     </div>
