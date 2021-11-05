@@ -33,13 +33,24 @@ body{
   background-position-x: 2rem;
   background-position-y: 2rem;
 }
+.no-separate{
+  white-space: nowrap;
+}
 .container{
   color:black;
 }
 .header{
   text-align:center;
-  margin:4rem;
+  margin:5rem;
 }
+@media (max-width: 990px){
+.header{
+  margin-top:12rem;
+}}
+.col-md-6{
+  margin-top:1rem;
+}
+
 .content{
   margin:5rem;
   color:black;

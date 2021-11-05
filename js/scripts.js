@@ -89,14 +89,10 @@ function displayPizzas(){
   
   Object.keys(pizzas.pizzas).forEach(function(key){
     const pizza=pizzas.pizzas[key]; //I'm realizing my choice of variable names was BAD
-    
-    if (pizzas.toppings===[] || pizzas.toppings===undefined){
-      toppings="none";
-    }
-    else{
+    let toppings="none";
+    if (pizza.toppings!=undefined){
       toppings=pizza.toppings.join(", ")
-    }
-    
+    } 
     $("#pizza-list").append("<li> Pizza " + pizza.id + " (size: "+pizza.size + "; toppings: "+ toppings+ ")</li>");
 
   });

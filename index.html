@@ -22,7 +22,7 @@
       <form id="form-pizza">
         <div class="row form-group">
           <div class="col">
-            <p>Please select the size of your pizza: </p>
+            <h5>Please select the size of your pizza: </h5>
             <input type="radio" id="small" name="size" value="small" required>
             <label for="small">Small (12-inch pie, $12)</label><br>
             <input  type="radio" id="medium" name="size" value="medium">
@@ -33,7 +33,7 @@
         </div>
         <div class="row form-group">
           
-          <div class="col-md-6">
+          <div class="col-md-4">
             <p>Premium toppings ($2 each): </p>
             <input type="checkbox" id="pepperoni" name="pepperoni" value="pepperoni">
             <label for="pepperoni">Vegan pepperoni</label><br>
@@ -42,19 +42,19 @@
             <input type="checkbox" id="bacon"  value="bacon">
             <label for="bacon">Veggie Bacon</label><br>
             <input type="checkbox" id="tofu" value="tofu">
-            <label for="tofu">Tofu ricotta</label><br>
+            <label for="tofu">Tofu ricotta</label>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-8 reg">
             <p>Regular toppings ($1 each): </p>
             
             <input type="checkbox" id="basil" value="basil">
             <label for="basil">Basil</label>
             <input type="checkbox" id="mushrooms" value="mushrooms">
-            <label for="mushrooms">Mushrooms</label><br>
+            <label for="mushrooms">Mushrooms</label>
             <input type="checkbox" id="spinach" value="spinach">
-            <label for="spinach">Spinach</label>
+            <label for="spinach">Spinach</label><br>
             <input type="checkbox" id="artichokes" value="artichokes">
-            <label for="artichokes">Artichokes</label><br>
+            <label for="artichokes">Artichokes</label>
             <input type="checkbox" id="olives" value="olives">
             <label for="olives">Olives</label>
             <input type="checkbox" id="tomatoes" value="tomatoes">
@@ -62,15 +62,21 @@
             <input type="checkbox" id="peppers" value="peppers">
             <label for="peppers">Peppers</label>
             <input type="checkbox" id="onions" value="onions">
-            <label for="onions">Onions</label><br>
-            <input type="checkbox" id="garlic" value="garlic">
-            <label for="garlic">Garlic</label>
+            <label for="onions">Onions</label>
+
+            <span class="no-separate"> 
+              <input type="checkbox" id="garlic" value="garlic">
+              <label for="garlic">Garlic</label></span>
+            <span class="no-separate"> <br>
             <input type="checkbox" id="pineapple" value="pineapple">
             <label for="pineapple">Pineapple</label>
+            </span>
+            <br>
+           
           </div>
-          <button class="btn btn-secondary btn-lg" id="pizza-time" type="submit">Add to Order</button>
+          
         </div>
-        
+        <button class="order-btn btn btn-secondary btn-lg" id="pizza-time" type="submit">Add to Order</button>
       </form>
       <div id="cart">
         <h3>Cart</h3>
