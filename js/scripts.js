@@ -71,8 +71,17 @@ function displayPizzas(pizzaList){
 
   });
 }
+function attachListeners(){
+  $("#").on("click",function(){
+
+  });
+  $("#").on("click",function(){
+
+  });
+}
 
 $(document).ready(function(){
+  attachListener();
   $("#form-pizza").submit(function(event){
     event.preventDefault();
     const toppingsSelected = getChecked();
@@ -84,6 +93,5 @@ $(document).ready(function(){
     $("#total-cost").html("$" + cost);
     $("#cart").show();
     displayPizzas(pizzas);
-  
   });
 });
