@@ -78,7 +78,6 @@ function deleteCartPizzas(){
 }
 let pizzas = new PizzasInCart();
 function displayPizzas(){
-  
   const toppingsSelected = getChecked();
   const size = $("input[name='size']:checked").val()
   newPizza= new Pizza(size, toppingsSelected);
@@ -94,15 +93,20 @@ function displayPizzas(){
 
   });
   $("#cart").show();
+  $('#form-pizza').trigger("reset");
+  
 }
 function attachListeners(){
   // $("#").on("click",function(){
 
   // });
   $("button#empty").on("click",function(){
-    alert(pizzas.pizzas[1].size);
-    // deleteCartPizza();
-    // displayPizzas();
+    deleteCartPizzas();
+    $("#pizza-list").empty();
+    $("#total-cost").html("$" + 0);
+    setTimeout('', 5000);
+    
+    $("#cart").hide();
   });
 }
 
@@ -111,5 +115,6 @@ $(document).ready(function(){
   $("#form-pizza").submit(function(event){
     event.preventDefault();
     displayPizzas();
+    
   });
 });
