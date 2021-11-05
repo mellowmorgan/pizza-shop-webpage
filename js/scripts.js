@@ -1,6 +1,7 @@
 function PizzasInCart(){
   this.pizzas = {};
   this.currentId = 0;
+  this.totalCost=0;
 }
 PizzasInCart.prototype.assignId=function(){
   this.currentId++;
@@ -10,12 +11,14 @@ PizzasInCart.prototype.deletePizza=function(id){
   if (this.pizzas[id] === undefined) {
     return false;
   }
+  this.totalCost=this.totalCost-(this.pizzas[id].getCost());
   delete this.pizzas[id];
   return true;
 };
 PizzasInCart.prototype.addPizza=function(pizza){
   pizza.id=this.assignId();
   this.pizzas[pizza.id]=pizza;
+  this.totalCost+=pizza.getCost();
   
 }
 
@@ -75,6 +78,7 @@ function deleteCartPizzas(){
   Object.keys(pizzas.pizzas).forEach(function(key){
     pizzas.deletePizza(key);
   });
+  pizzas.currentId = 0;
 }
 let pizzas = new PizzasInCart();
 function displayPizzas(){
@@ -82,8 +86,9 @@ function displayPizzas(){
   const size = $("input[name='size']:checked").val()
   newPizza= new Pizza(size, toppingsSelected);
  
-  const cost = newPizza.getCost();
+ 
   pizzas.addPizza(newPizza);
+  let cost = pizzas.totalCost;
   $("#pizza-list").empty();
   $("#total-cost").html("$" + cost);
   
