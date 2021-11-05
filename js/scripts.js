@@ -88,8 +88,16 @@ function displayPizzas(){
   $("#total-cost").html("$" + cost);
   
   Object.keys(pizzas.pizzas).forEach(function(key){
-    const pizza=pizzas.pizzas[key];
-    $("#pizza-list").append("<li> Pizza " + pizza.id + " (size: "+pizza.size + "; toppings: "+ pizza.toppings.join(", ") + ")</li>");
+    const pizza=pizzas.pizzas[key]; //I'm realizing my choice of variable names was BAD
+    
+    if (pizzas.toppings===[] || pizzas.toppings===undefined){
+      toppings="none";
+    }
+    else{
+      toppings=pizza.toppings.join(", ")
+    }
+    
+    $("#pizza-list").append("<li> Pizza " + pizza.id + " (size: "+pizza.size + "; toppings: "+ toppings+ ")</li>");
 
   });
   $("#cart").show();

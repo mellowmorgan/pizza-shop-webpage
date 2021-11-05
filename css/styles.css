@@ -7,6 +7,7 @@
 #cart button{
   margin-right:.5rem;
 }
+
 #cart h3,h4,h5,ul{
   margin-bottom:1rem;
 }
@@ -25,7 +26,7 @@ li{
 
 
 body{
-  background-image: url(../img/3.jpeg);
+  background-image: url(../img/1pizza.jpeg);
   background-color:white;
   background-size:300px;
   background-repeat: no-repeat;
