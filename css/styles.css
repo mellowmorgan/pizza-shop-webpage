@@ -1,6 +1,29 @@
 #cart{
   display:none;  
 }
+#modal{
+  color:black;
+}
+body{
+  background-image: url(../img/3.jpeg);
+  background-color:white;
+  background-size:300px;
+  background-repeat: no-repeat;
+  background-position-x: 2rem;
+  background-position-y: 2rem;
+}
+.container{
+  color:black;
+}
+.header{
+  text-align:center;
+  margin:4rem;
+}
+.content{
+  margin:5rem;
+  color:black;
+  
+}
 
 
 #delivery-form, #pickup-form{
@@ -20,17 +43,21 @@
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
+.modal-content button, label{
+  margin-top:1rem;
+}
 
 /* Modal Content/Box */
 .modal-content {
+  color:black;
   max-width: 800px;
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
+  padding: 25px;
   border: 1px solid #888;
   width: 60%; /* Could be more or less, depending on screen size */
 }
+
 
 /* The Close Button */
 .close {

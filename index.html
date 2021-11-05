@@ -9,109 +9,106 @@
 </head>
 <body>
   <div class="container">
-    <div class="row">
-      <div class="col">
-        <h4>Custom Pizza</h4>
-        <h5>Everything is vegan!</h5>
-        <p>We use Follow Your Heart vegan cheese on all our pies.</p>
-        
-        <form id="form-pizza">
-          <div class="form-group">
-            <p>Please select the size of your pizza: </p>
-            <input type="radio" id="small" name="size" value="small" required>
-            <label for="small">Small (12-inch pie, $12)</label><br>
-            <input  type="radio" id="medium" name="size" value="medium">
-            <label for="medium">Medium (14-inch pie, $14)</label><br>
-            <input type="radio" id="large" name="size" value="large">
-            <label for="large">Large (16-inch pie, $16)</label>
-          </div>
-          <div class="form-group">
-            <p>Please select your toppings: </p>
-            <p>Premium toppings ($2 each): </p>
-            <input type="checkbox" id="pepperoni" name="pepperoni" value="pepperoni">
-            <label for="pepperoni">Vegan pepperoni</label>
-            <input type="checkbox" id="sausage" name="sausage" value="sausage">
-            <label for="sausage">Veggie sausage</label>
-            <input type="checkbox" id="bacon"  value="bacon">
-            <label for="bacon">Veggie Bacon</label>
-            <input type="checkbox" id="tofu" value="tofu">
-            <label for="tofu">Tofu ricotta</label>
-            <p>Regular toppings ($1 each): </p>
-            <input type="checkbox" id="basil" name="" value="basil">
-            <label for="basil">Basil</label>
-            <input type="checkbox" id="mushrooms" value="mushrooms">
-            <label for="mushrooms">Mushrooms</label>
-            <input type="checkbox" id="spinach" value="spinach">
-            <label for="spinach">Spinach</label>
-            <input type="checkbox" id="artichokes" value="artichokes">
-            <label for="artichokes">Artichokes</label>
-            <input type="checkbox" id="olives" value="olives">
-            <label for="olives">Olives</label>
-            <input type="checkbox" id="tomatoes" value="tomatoes">
-            <label for="tomatoes">Tomatoes</label>
-            <input type="checkbox" id="peppers" value="peppers">
-            <label for="peppers">Peppers</label>
-            <input type="checkbox" id="onions" value="onions">
-            <label for="onions">Onions</label>
-            <input type="checkbox" id="garlic" value="garlic">
-            <label for="garlic">Garlic</label>
-            <input type="checkbox" id="pineapple" value="pineapple">
-            <label for="pineapple">Pineapple</label>
-          </div>
-          <button class="btn btn-primary" id="pizza-time" type="submit">Add to Order</button>
-        </form>
-        <div id="cart">
-          <h3>Cart</h3>
-          <h5>Pizzas in cart:</h5>
-          <ul id="pizza-list">
-          
-          </ul>
-          <h5>Total Cost: <span id="total-cost"></span></h5>
-          <button id="empty" class="btn btn-danger">Empty Cart</button>
-          <button id="myBtn" class="btn btn-secondary">Confirm Order</button>
-        </div>
-       <!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h1>Please Select Pick up or Delivery</h1>
-    <a id="pickup" href="#">Pick Up</a>
-    <div id="pickup-form">
-      <div class="form-group">
-      <form id="form1">
-        <label for="pickup-name">Name: </label>
-        <input id="pickup-name" class="form-control">
-
-        <label for="pickup-address"></labelfor>>Address: </label>
-        <input id="pickup-address" class="form-control">
-        <label for="pickup-phone">Phone: </label>
-        <input class="form-control">
-        <button class="btn">Confirm Pickup</button>
-      </form>
+    <div class="header">
+      <h2><b>Morgan's Vegan Pizza Shop</b></h1>
+      <h5><em>Everything is vegan!</em></h5>
     </div>
-    </div>
-    <a id="delivery" href="#">Delivery</a>
-    <div id="delivery-form">
-      <div class="form-group">
-      <form id="form2">
-        <label>Name: </label>
-        <input class="form-control">
-
-        <label>Address: </label>
-        <input class="form-control">
-        <label>Phone: </label>
-        <input class="form-control">
-        <button class="btn">Confirm Delivery</button>
-      </div>
-      </form>
-    </div>
-  </div>
-
-</div>
+    <div class="content">
+           <h4>Custom BYO Pizza</h4>
+    
+      <p>We use Follow Your Heart vegan cheese on all our pies.</p>
       
+      <form id="form-pizza">
+        <div class="form-group">
+          <p>Please select the size of your pizza: </p>
+          <input type="radio" id="small" name="size" value="small" required>
+          <label for="small">Small (12-inch pie, $12)</label><br>
+          <input  type="radio" id="medium" name="size" value="medium">
+          <label for="medium">Medium (14-inch pie, $14)</label><br>
+          <input type="radio" id="large" name="size" value="large">
+          <label for="large">Large (16-inch pie, $16)</label>
+        </div>
+        <div class="form-group">
+          <p>Please select your toppings: </p>
+          <p>Premium toppings ($2 each): </p>
+          <input type="checkbox" id="pepperoni" name="pepperoni" value="pepperoni">
+          <label for="pepperoni">Vegan pepperoni</label>
+          <input type="checkbox" id="sausage" name="sausage" value="sausage">
+          <label for="sausage">Veggie sausage</label>
+          <input type="checkbox" id="bacon"  value="bacon">
+          <label for="bacon">Veggie Bacon</label>
+          <input type="checkbox" id="tofu" value="tofu">
+          <label for="tofu">Tofu ricotta</label>
+          <p>Regular toppings ($1 each): </p>
+          <input type="checkbox" id="basil" name="" value="basil">
+          <label for="basil">Basil</label>
+          <input type="checkbox" id="mushrooms" value="mushrooms">
+          <label for="mushrooms">Mushrooms</label>
+          <input type="checkbox" id="spinach" value="spinach">
+          <label for="spinach">Spinach</label>
+          <input type="checkbox" id="artichokes" value="artichokes">
+          <label for="artichokes">Artichokes</label>
+          <input type="checkbox" id="olives" value="olives">
+          <label for="olives">Olives</label>
+          <input type="checkbox" id="tomatoes" value="tomatoes">
+          <label for="tomatoes">Tomatoes</label>
+          <input type="checkbox" id="peppers" value="peppers">
+          <label for="peppers">Peppers</label>
+          <input type="checkbox" id="onions" value="onions">
+          <label for="onions">Onions</label>
+          <input type="checkbox" id="garlic" value="garlic">
+          <label for="garlic">Garlic</label>
+          <input type="checkbox" id="pineapple" value="pineapple">
+          <label for="pineapple">Pineapple</label>
+        </div>
+        <button class="btn btn-primary" id="pizza-time" type="submit">Add to Order</button>
+      </form>
+      <div id="cart">
+        <h3>Cart</h3>
+        <h5>Pizzas in cart:</h5>
+        <ul id="pizza-list">
+        </ul>
+        <h5>Total Cost: <span id="total-cost"></span></h5>
+        <button id="empty" class="btn btn-danger">Empty Cart</button>
+        <button id="myBtn" class="btn btn-secondary">Confirm Order</button>
       </div>
+    </div>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1>Please Select Pick up or Delivery</h1>
+        <a id="pickup" href="#">Pick Up</a>
+        <div id="pickup-form">
+            <form id="form1">
+              <div class="form-group">
+                <label for="pickup-name">Name: </label>
+                <input id="pickup-name" class="form-control">
+
+                <label for="pickup-address"></labelfor>Address: </label>
+                <input id="pickup-address" class="form-control">
+                <label for="pickup-phone">Phone: </label>
+                <input class="form-control">
+                <button class="btn">Confirm Pickup</button>
+              </div>
+            </form>
+        </div>
+        <a id="delivery" href="#">Delivery</a>
+        <div id="delivery-form">
+            <form id="form2">
+              <div class="form-group">
+                <label>Name: </label>
+                <input class="form-control">
+
+                <label>Address: </label>
+                <input class="form-control">
+                <label>Phone: </label>
+                <input class="form-control">
+                <button class="btn btn-dark">Confirm Delivery</button>
+              </div>
+            </form>   
+        </div>
+    </div>
     </div>
   </div>
 </body>
