@@ -125,7 +125,7 @@ function attachListeners(){
     $("#myModal").show();
   });
 
- $(".close").on("click", function() {
+  $(".close").on("click", function() {
    $("#myModal").hide();
    $("#delivery").show();
    $("#pickup").show();
@@ -134,7 +134,21 @@ function attachListeners(){
    $("#pickup-form").hide();
    $("#delivery-form").hide();
 
-});
+  });
+  //I'm not actually going to do anything with these values below;
+  //If I had more time I'd do a Customer constructor to store it.
+  $("#form1").submit(function(){
+    $("#pickup-name").val();
+    $("#pickup-phone").val();
+    
+  });
+  $("#form2").submit(function(){
+    $("#delivery-name").val();
+    $("#delivery-address").val();
+    $("#delivery-phone").val();
+  });
+
+  
 }
 
 $(document).ready(function(){

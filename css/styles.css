@@ -1,9 +1,29 @@
 #cart{
+  margin-top:3rem;
+  background-color:rgb(208, 208, 208);
   display:none;  
+  padding:2rem;
 }
+#cart button{
+  margin-right:.5rem;
+}
+#cart h3,h4,h5,ul{
+  margin-bottom:1rem;
+}
+label{
+  margin-right:1rem;
+}
+#form-pizza button{
+  margin-top:2rem;}
+p{font-weight: bold;}
 #modal{
   color:black;
 }
+li{
+  margin-bottom:1rem;
+}
+
+
 body{
   background-image: url(../img/3.jpeg);
   background-color:white;
@@ -22,7 +42,6 @@ body{
 .content{
   margin:5rem;
   color:black;
-  
 }
 
 
@@ -31,6 +50,7 @@ body{
 }
 
 /* The Modal (background) */
+/* I got all this below from W3Schools */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
