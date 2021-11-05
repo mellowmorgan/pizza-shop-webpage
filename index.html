@@ -27,20 +27,22 @@
             <p>Please select your toppings: </p>
             <p>Premium toppings ($2 each): </p>
             <input type="checkbox" id="pepperoni" name="pepperoni" value="pepperoni">
-            <label for="pepperoni">Pepperoni</label>
-            <input type="checkbox" id="veggie-sausage" name="veggie-sausage" value="veggie-sausage">
-            <label for="veggie sausage">Veggie sausage</label>
+            <label for="pepperoni">Vegan pepperoni</label>
+            <input type="checkbox" id="sausage" name="sausage" value="sausage">
+            <label for="sausage">Veggie sausage</label>
             <input type="checkbox" id="bacon"  value="bacon">
             <label for="bacon">Veggie Bacon</label>
-            <input type="checkbox" id="tofu-ricotta" value="tofu-ricotta">
-            <label for="tofu-ricotta">Tofu ricotta</label>
+            <input type="checkbox" id="tofu" value="tofu">
+            <label for="tofu">Tofu ricotta</label>
             <p>Regular toppings ($1 each): </p>
             <input type="checkbox" id="basil" name="" value="basil">
             <label for="basil">Basil</label>
+            <input type="checkbox" id="mushrooms" value="mushrooms">
+            <label for="mushrooms">Mushrooms</label>
             <input type="checkbox" id="spinach" value="spinach">
             <label for="spinach">Spinach</label>
             <input type="checkbox" id="artichokes" value="artichokes">
-            <label for="artichokes">Medium</label>
+            <label for="artichokes">Artichokes</label>
             <input type="checkbox" id="olives" value="olives">
             <label for="olives">Olives</label>
             <input type="checkbox" id="tomatoes" value="tomatoes">
@@ -48,7 +50,7 @@
             <input type="checkbox" id="peppers" value="peppers">
             <label for="peppers">Peppers</label>
             <input type="checkbox" id="onions" value="onions">
-            <label for="large">Large</label>
+            <label for="onions">Onions</label>
             <input type="checkbox" id="garlic" value="garlic">
             <label for="garlic">Garlic</label>
             <input type="checkbox" id="pineapple" value="pineapple">
@@ -56,7 +58,9 @@
           </div>
           <button class="btn btn-primary" id="pizza-time" type="submit">Submit</button>
         </form>
-
+        <div>
+          <p>Your pizza is: <span id="pizza"></span></p>
+        </div>
       </div>
     </div>
   </div>

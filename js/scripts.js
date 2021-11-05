@@ -15,7 +15,7 @@ Pizza.prototype.getCost=function(){
     cost+=12;
   }
   const toppings = this.toppings;
-  const highPriceItems = ["veggie sausage","veggie pepperoni", "veggie bacon", "tofu ricotta"];
+  const highPriceItems = ["sausage","pepperoni", "bacon", "tofu"];
   const otherPriceItems = ["artichokes", "mushrooms", "basil", "olives","tomatoes","onions","peppers", "spinach", "garlic", "pineapple"]; 
   highPriceItems.forEach(function(item){
     if(toppings.includes(item)){
@@ -33,20 +33,20 @@ Pizza.prototype.getCost=function(){
 let newPizza;
 
 function getChecked(){
-  const highPriceItems = ["veggie sausage","veggie pepperoni", "veggie bacon", "tofu ricotta"];
+  const highPriceItems = ["sausage","pepperoni", "bacon", "tofu"];
   const otherPriceItems = ["artichokes", "mushrooms", "basil", "olives","tomatoes","onions","peppers", "spinach", "garlic", "pineapple"]; 
   let toppingsChecked=[];
   highPriceItems.forEach(function(item){
       if($("#"+item).is(":checked")){
-        toppings.push($("#"+item).val());
+        toppingsChecked.push($("#"+item).val());
       }
     });
     otherPriceItems.forEach(function(item){
       if($("#"+item).is(":checked")){
-        toppings.push($("#"+item).val());
+        toppingsChecked.push($("#"+item).val());
       }
     });
-    return toppings;
+    return toppingsChecked;
 }
 
 $(document).ready(function(){
@@ -55,5 +55,7 @@ $(document).ready(function(){
     const toppingsSelected = getChecked();
     const size = $("input[name='size']:checked").val()
     newPizza= new Pizza(size, toppingsSelected);
+    $("#pizza").html(newPizza.size+ ", " +newPizza.toppings);
+
   });
 });
