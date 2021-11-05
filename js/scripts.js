@@ -30,10 +30,30 @@ Pizza.prototype.getCost=function(){
 
   return cost;
 }
+let newPizza;
+
+function getChecked(){
+  const highPriceItems = ["veggie sausage","veggie pepperoni", "veggie bacon", "tofu ricotta"];
+  const otherPriceItems = ["artichokes", "mushrooms", "basil", "olives","tomatoes","onions","peppers", "spinach", "garlic", "pineapple"]; 
+  let toppingsChecked=[];
+  highPriceItems.forEach(function(item){
+      if($("#"+item).is(":checked")){
+        toppings.push($("#"+item).val());
+      }
+    });
+    otherPriceItems.forEach(function(item){
+      if($("#"+item).is(":checked")){
+        toppings.push($("#"+item).val());
+      }
+    });
+    return toppings;
+}
 
 $(document).ready(function(){
-  $("#formPizza").submit(function(event){
+  $("#form-pizza").submit(function(event){
     event.preventDefault();
-    
+    const toppingsSelected = getChecked();
+    const size = $("input[name='size']:checked").val()
+    newPizza= new Pizza(size, toppingsSelected);
   });
 });
