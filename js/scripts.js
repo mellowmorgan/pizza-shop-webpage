@@ -81,8 +81,8 @@ function displayPizzas(){
   const toppingsSelected = getChecked();
   const size = $("input[name='size']:checked").val()
   newPizza= new Pizza(size, toppingsSelected);
-  //pizza.size correct
-  const cost = newPizza.getCost();//changing pizza size to large somehow
+ 
+  const cost = newPizza.getCost();
   pizzas.addPizza(newPizza);
   $("#pizza-list").empty();
   $("#total-cost").html("$" + cost);
@@ -100,14 +100,41 @@ function attachListeners(){
   // $("#").on("click",function(){
 
   // });
+  $("#delivery").on("click",function(){
+    $("#delivery-form").show();
+    $("#pickup").hide();
+    $("#delivery").hide();
+  });
+  $("#pickup").on("click",function(){
+    $("#pickup-form").show();
+    $("#pickup").hide();
+    $("#delivery").hide();
+
+  });
   $("button#empty").on("click",function(){
     deleteCartPizzas();
     $("#pizza-list").empty();
     $("#total-cost").html("$" + 0);
-    setTimeout('', 5000);
+    $(this).delay(1900).queue(function() {
+      $("#cart").hide();
+      $(this).dequeue();
+   });
     
-    $("#cart").hide();
   });
+  $("#myBtn").on("click", function() {
+    $("#myModal").show();
+  });
+
+ $(".close").on("click", function() {
+   $("#myModal").hide();
+   $("#delivery").show();
+   $("#pickup").show();
+   $('#form1').trigger("reset");
+   $('#form2').trigger("reset");
+   $("#pickup-form").hide();
+   $("#delivery-form").hide();
+
+});
 }
 
 $(document).ready(function(){
@@ -115,6 +142,5 @@ $(document).ready(function(){
   $("#form-pizza").submit(function(event){
     event.preventDefault();
     displayPizzas();
-    
   });
 });
