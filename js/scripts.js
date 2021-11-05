@@ -1,5 +1,15 @@
 function PizzasInCart(){
   this.pizzas = {};
+  this.currentId = 0;
+}
+PizzasInCart.prototype.assignId=function(){
+  this.currentId++;
+  return this.currentId;
+}
+PizzasInCart.prototype.addPizza=function(pizza){
+  pizza.id=this.assignId();
+  this.pizzas[pizza.id]=pizza;
+  
 }
 function Pizza(size,toppings){
   this.size=size;
@@ -51,6 +61,7 @@ function getChecked(){
     });
     return toppingsChecked;
 }
+
 
 $(document).ready(function(){
   $("#form-pizza").submit(function(event){
