@@ -16,23 +16,24 @@ Pizza.prototype.getCost=function(){
   }
   const toppings = this.toppings;
   const highPriceItems = ["veggie sausage","veggie pepperoni", "veggie bacon", "tofu ricotta"];
-  const mediumPriceItems = ["artichokes", "eggplant", "mushrooms", "basil", "olives"];
-  const lowPriceItems = ["tomatoes","onions","peppers", "spinach", "garlic", "pineapple"];
+  const otherPriceItems = ["artichokes", "mushrooms", "basil", "olives","tomatoes","onions","peppers", "spinach", "garlic", "pineapple"]; 
   highPriceItems.forEach(function(item){
     if(toppings.includes(item)){
       cost+=2;
     }
   })
-  mediumPriceItems.forEach(function(item){
+  otherPriceItems.forEach(function(item){
     if(toppings.includes(item)){
       cost+=1;
     }
   })
-  lowPriceItems.forEach(function(item){
-    if(toppings.includes(item)){
-      cost+=.5;
-    }
-  });
+
   return cost;
 }
 
+$(document).ready(function(){
+  $("#formPizza").submit(function(event){
+    event.preventDefault();
+    
+  });
+});
