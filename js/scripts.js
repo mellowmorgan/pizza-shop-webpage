@@ -45,6 +45,8 @@ Pizza.prototype.getCost=function(){
 }
 let newPizza;
 
+let pizzas = new PizzasInCart();
+
 function getChecked(){
   const highPriceItems = ["sausage","pepperoni", "bacon", "tofu"];
   const otherPriceItems = ["artichokes", "mushrooms", "basil", "olives","tomatoes","onions","peppers", "spinach", "garlic", "pineapple"]; 
@@ -61,7 +63,14 @@ function getChecked(){
     });
     return toppingsChecked;
 }
+function displayPizzas(pizzaList){
+  $("#pizza-list").empty();
+  Object.keys(pizzaList.pizzas).forEach(function(key){
+    const pizza=pizzaList.pizzas[key];
+    $("#pizza-list").append("<li> Pizza " + pizza.id + " (size: "+pizza.size + "; toppings: "+ pizza.toppings.join(", ") + ")</li>");
 
+  });
+}
 
 $(document).ready(function(){
   $("#form-pizza").submit(function(event){
@@ -71,9 +80,10 @@ $(document).ready(function(){
     newPizza= new Pizza(size, toppingsSelected);
     //pizza.size correct
     const cost = newPizza.getCost();//changing pizza size to large somehow
+    pizzas.addPizza(newPizza);
     $("#total-cost").html("$" + cost);
-
     $("#cart").show();
+    displayPizzas(pizzas);
   
   });
 });
