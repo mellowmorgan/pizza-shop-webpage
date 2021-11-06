@@ -95,7 +95,7 @@ function displayPizzas(){
     if (pizza.toppings.length>0){
       toppings=pizza.toppings.join(", ")
     } 
-    $("#pizza-list").append("<li> Pizza " + pizza.id + " (size: "+pizza.size + "; toppings: "+ toppings+ ")</li>");
+    $("#pizza-list").append("<li> Pizza " + pizza.id + " (size: "+pizza.size + "; toppings: "+ toppings+ "; price: $"+ pizza.getCost()+")</li>");
   });
   $("#cart").show();
   $('#form-pizza').trigger("reset");
