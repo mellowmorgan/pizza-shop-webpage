@@ -29,8 +29,8 @@ Copyright (c) 2021 Morgan Waites.
 Describe: Pizza()<br>
 
 Test: "It should return a Pizza object with two properties for toppings and size"<br>
-Code: const myPizza = new Pizza(["mushrooms", "veggie sausage", "olives", "basil", "artichokes"], "large");<br>
-Expected Output: Pizza { toppings: ["mushrooms", "veggie sausage", "olives", "basil", "artichokes"], size: "large" }<br>
+Code: const myPizza = new Pizza("large", ["mushrooms", "veggie sausage", "olives", "basil", "artichokes"]);<br>
+Expected Output: Pizza {  size: "large", toppings: ["mushrooms", "veggie sausage", "olives", "basil", "artichokes"]}<br>
 
 Describe: Pizza.prototype.getCost()<br>
 

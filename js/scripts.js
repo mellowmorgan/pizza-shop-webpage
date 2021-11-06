@@ -52,7 +52,6 @@ Pizza.prototype.getCost=function(){
       cost+=1;
     }
   })
-
   return cost;
 }
 
@@ -91,7 +90,7 @@ function displayPizzas(){
   $("#pizza-list").empty();
   $("#total-cost").html("$" + cost);
   Object.keys(pizzas.pizzas).forEach(function(key){
-    const pizza=pizzas.pizzas[key]; //I'm realizing my choice of variable names was BAD
+    const pizza=pizzas.pizzas[key]; //I'm realizing my choice of variable names was bad
     let toppings="none";
     if (pizza.toppings.length>0){
       toppings=pizza.toppings.join(", ")
@@ -103,9 +102,7 @@ function displayPizzas(){
 }
 
 function attachListeners(){
-  // $("#").on("click",function(){
 
-  // });
   $("#delivery").on("click",function(){
     $("#delivery-form").show();
     $("#pickup").hide();
@@ -141,18 +138,8 @@ function attachListeners(){
    $("#delivery-form").hide();
 
   });
-  //I'm not actually going to do anything with these values below;
-  //If I had more time I'd do a Customer constructor to store it.
-  $("#form1").submit(function(){
-    $("#pickup-name").val();
-    $("#pickup-phone").val();
-    
-  });
-  $("#form2").submit(function(){
-    $("#delivery-name").val();
-    $("#delivery-address").val();
-    $("#delivery-phone").val();
-  });
+  //didn't actually do anything with modal forms values
+  //would create Customer constructor if I had the time
 }
 
 let newPizza;
