@@ -53,7 +53,7 @@ Expected Output: myPizzas { pizzas: {MyPizza} }<br>
 Describe: PizzasInCart.prototype.assignId()<br>
 
 Test: "It should return unique ID"<br>
-Code: myPizzas.assignId;<br>
+Code: myPizzas.assignId();<br>
 Expected Output: 1<br>
 
 Describe: PizzasInCart.prototype.delete(id)<br>
